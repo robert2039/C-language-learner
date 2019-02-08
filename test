@@ -1,0 +1,15 @@
+#include <stdio.h>//数据输出范例
+int main(){
+    int a = 2048;
+    double b = 3.1415926;
+    char c = a;
+    printf("a = %d,b = %f, b (science)= %e,c = %c",a,b,b,c);
+    //printf函数的调用形式：printf（格式控制，输出项1，输出项2，...）
+    //整数%d,浮点数%lf或者%f，指数%e,字符%c
+    //格式说明符前面可以添加宽度说明、左对齐、前导符号等
+
+    printf("a = %-06d",a);//左对齐，不足数字用0来补充，共输6位整数
+    //输出一些特殊符号
+    printf("%%");
+    return 0;
+}
