@@ -1,0 +1,26 @@
+    #include<stdio.h>  
+    struct student  
+    {  
+        char name[10];  
+        int age;  
+        int score[3];  
+        double avg;  
+    };  
+    typedef struct student stu;//typedef 是用来为复杂的声明定义简单的别名，  
+    //后面这种结构体类型就称为stu,这条语句也可以放在主函数里面  
+    int main(){  
+        stu stu1 =   
+        {  
+            "LiuKai",  
+            22,  
+            {80,70,90},  
+            0.0,  
+        };  
+        printf("student1 name:%s\n",stu1.name);  
+        //typedef 的其他用法示例  
+        typedef double data;  
+        data num1 = 2.13;  
+        data num2 = 3.24;  
+        printf("data :%.2lf %.2lf",num1,num2);  
+        return 0;  
+    }  
