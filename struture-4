@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include <string.h>
+struct student
+{
+    char name[10];
+    int age;
+    int score[3];
+    double avg;
+};
+typedef struct student stu;
+int main(){
+    stu s1 =
+    {
+        "LiMing",
+        21,
+        {89,90,93},
+        0.0,
+    };
+    stu s2;
+    int i;
+    strcpy(s2.name,"LiMing");//如果只需要对
+    printf("First try:\n");
+    printf(s2.name,"LiMing");
+    printf("\n");
+    s2 = s1;//如果需要对结构体变量进行整体赋值就用赋值号
+    printf("Student name:%s\n",s2.name);
+    printf("Age:%d\n",s2.age);
+    printf("Score:");
+    for (i=0;i<3;i++)
+    {
+        printf("%d ",s2.score[i]);
+    }
+    return 0;
+}
